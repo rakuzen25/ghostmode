@@ -231,7 +231,7 @@
         {/if}
 
         {#if chat.status !== Status.Online}
-            <div class="grid text-center text-sm text-surface-500">
+            <div class="grid text-center text-sm text-surface-500" transition:fade={{ duration: 150 }}>
                 {#if chat.status === Status.Focus}
                     <div class="col-start-1 row-start-1" transition:fade={{ duration: 150 }}>
                         {chat.name} is in <StatusIcon status={Status.Focus} /> mode. <StatusIcon status={TextPriority.Normal} /> messages are filtered.

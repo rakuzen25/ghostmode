@@ -142,7 +142,7 @@
     {/if}
 
     {#if statusStore.value.status !== Status.Online}
-        <div class="mt-4 grid flex-1 text-center text-surface-500">
+        <div class="mt-4 grid flex-1 text-center text-surface-500" transition:fade={{ duration: 150 }}>
             {#if statusStore.value.status === Status.Focus}
                 <div class="col-start-1 row-start-1" transition:fade={{ duration: 150 }}>
                     You are in <StatusIcon status={Status.Focus} /> mode. <StatusIcon status={TextPriority.Normal} /> messages are hidden.

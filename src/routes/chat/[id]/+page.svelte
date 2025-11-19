@@ -21,8 +21,7 @@
     const id = +(page.params.id ?? 0);
     // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
     if (!chatStore.value[id]) {
-        // eslint-disable-next-line @typescript-eslint/only-throw-error
-        throw error(404, "Chat not found");
+        error(404, "Chat not found");
     }
     const chat = $derived({
         id,
@@ -173,7 +172,7 @@
 </script>
 
 <svelte:head>
-    <title>Chat with Frank | GhostMode</title>
+    <title>{chat.name} ({chat.channel}) | GhostMode</title>
 </svelte:head>
 
 <AppBar>

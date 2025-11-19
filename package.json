@@ -42,5 +42,6 @@
     "dependencies": {
         "@lucide/svelte": "^0.554.0",
         "superjson": "^2.2.5"
-    }
+    },
+    "packageManager": "pnpm@10.22.0"
 }

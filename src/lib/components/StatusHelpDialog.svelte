@@ -3,18 +3,20 @@
     import { XIcon } from "@lucide/svelte";
     import { Dialog, Portal } from "@skeletonlabs/skeleton-svelte";
     import StatusIcon from "./StatusIcon.svelte";
+    import type { Snippet } from "svelte";
 
     let {
-        open,
+        children,
     }: {
-        open: boolean;
+        children?: Snippet;
     } = $props();
 
     const animation =
         "transition transition-discrete opacity-0 translate-y-[100px] starting:data-[state=open]:opacity-0 starting:data-[state=open]:translate-y-[100px] data-[state=open]:opacity-100 data-[state=open]:translate-y-0";
 </script>
 
-<Dialog {open}>
+<Dialog>
+    <Dialog.Trigger>{@render children?.()}</Dialog.Trigger>
     <Portal>
         <Dialog.Backdrop class="fixed inset-0 z-50 bg-surface-50-950/50" />
         <Dialog.Positioner class="fixed inset-0 z-50 flex items-center justify-center p-4">

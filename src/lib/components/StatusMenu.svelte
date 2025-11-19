@@ -5,8 +5,6 @@
     import StatusHelp from "./StatusHelpDialog.svelte";
     import StatusIcon from "./StatusIcon.svelte";
     import { clearStatus, statusStore } from "$lib/stores.svelte";
-
-    let openHelp = false;
 </script>
 
 <Menu positioning={{ placement: "bottom-end" }}>
@@ -28,10 +26,11 @@
                     {/if}
                 {/each}
                 <Menu.Separator />
-                <Menu.Item value="help" onclick={() => (openHelp = true)}>
-                    <Menu.ItemText class="text-sm text-surface-500 italic">Help</Menu.ItemText>
-                    <StatusHelp open={openHelp} />
-                </Menu.Item>
+                <StatusHelp>
+                    <Menu.Item value="help">
+                        <Menu.ItemText class="text-sm text-surface-500 italic">Help</Menu.ItemText>
+                    </Menu.Item>
+                </StatusHelp>
             </Menu.Content>
         </Menu.Positioner>
     </Portal>

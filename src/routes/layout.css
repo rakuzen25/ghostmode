@@ -1,0 +1,17 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/forms";
+
+@import "@skeletonlabs/skeleton";
+@import "@skeletonlabs/skeleton-svelte";
+@import "@skeletonlabs/skeleton/themes/cerberus";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+.select,
+.input,
+.textarea,
+.ig-input,
+.ig-select {
+    background-color: var(--color-surface-50-950);
+    color: var(--color-surface-950-50);
+}

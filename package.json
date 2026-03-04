@@ -40,7 +40,7 @@
         "vite-plugin-devtools-json": "^1.0.0"
     },
     "dependencies": {
-        "@lucide/svelte": "^0.554.0",
+        "@lucide/svelte": "^0.577.0",
         "superjson": "^2.2.5"
     },
     "packageManager": "pnpm@10.22.0"
